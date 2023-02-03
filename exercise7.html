@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!-- INSTRUCTIONS:
+1. The client likes the dropdown menus but has noticed that top left and top right borders have a radius on them. Inspect this in browser dev tools 
+    TO FIX, inspect the UL with a class of "show" and look for and hover over a small yellow triangle error icon that will reveal the change you have to make to fix this issue. There is a mistake in the way the value is provided.   
+2. The client wants the top of the dropdown menu to align with the bottom of the nav at the desktop view
+3. The client also wants the border to disappear on the drop-down menu on mobile and for the top margin of this dropdown to not be so large on mobile 
+    To FIX, this add a rule in the supplied media query. 
+-->
+    <title>Title Goes Here</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+
+    <style>
+            
+    /* START STYLES YOU DON'T HAVE TO CHANGE */
+    nav {
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    }
+    main {
+    margin-top: 87px;
+    }  
+    /* END STYLES YOU DON'T HAVE TO CHANGE */
+            
+        /* 1. Fix the coding error having to do with attribute values */
+
+        nav ul.show {
+            background: #f8f9fa;
+            margin-top: 53px;
+            border-top: none;
+            border-top-left-radius:0;
+            border-top-right-radius: 0;
+        }
+
+        /* 2. Fix the desktop view and take note of what this variable refers to */
+        .dropdown-menu {
+            --bs-dropdown-spacer: 23px;
+        }
+        /* 3. Fix the mobile view */
+        @media (max-width:500px) {
+            .dropdown-menu {
+            --bs-dropdown-spacer:0px;/
+ 
+            }
+            ul.dropdown-menu.show {
+            /* something in here */
+
+            }    
+     border;0    }
+            
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Navigation -->
+
+
+ <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+   <a class="navbar-brand" href="#"><img src="https://via.placeholder.com/120x60?text=LOGO"  aria-label="Home" ></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item align-self-lg-center">
+          <a class="nav-link" href="#">Our Super Duper Digital Products</a>
+        </li>
+        <li class="nav-item dropdown align-self-lg-center">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Our Ad Consulting Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown align-self-lg-center">
+          <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About Us
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>       
+        
+  <!-- Page Content -->
+  
+            <main>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="mt-5  text-center">A Design for Client Review</h1>
+                            <p>Proin eget tortor risus. Nulla porttitor accumsan tincidunt.</p>
+                            <p>Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Bootstrap core JavaScript -->
+            <!-- External Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+        </body>
+
+</html>
